@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function fun01(){
+            document.querySelector("h1").style.color="red";
+        }
+        function fun02(){
+            document.querySelector("#fj").style.backgroundColor="green";
+        }
+        function fun03(){
+            const res = document.getElementsByTagName("p");
+            for (let i = 0; i < res.length; i++){
+                res[i].classList.add("bl");
+            }
+        }
+        function fun04(){
+            let qs = document.querySelector(".qs");
+            qs.classList.add("yel");
+        }
+    </script>
+    <style>
+        .yel {
+            width: 500px;
+            border: 2px solid yellow;
+        }
+        .bl {
+            color: blue;
+            font-size: 24px;
+            font-family: 楷体;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>清平乐~会昌</h1>
+        <p>东方欲晓，</p>
+        <p>莫道君行早。</p>
+        <p class="qs">踏遍青山人未老，</p>
+        <p id="fj">风景这边独好。</p>
+        <p>
+            <input type="button" value="标题变红" onclick="fun01()">&nbsp;
+            <input type="button" value="最后一行变绿色背景" onclick="fun02()">&nbsp;
+            <input type="button" value="所有段落文字添加样式bl" onclick="fun03()">&nbsp;
+            <input type="button" value="第三行正文添加样式yel" onclick="fun04()">&nbsp;
+        </p>
+    </div>
+</body>
+</html>
